@@ -25,6 +25,8 @@ class BodydataController < ApplicationController
   # POST /bodydata.json
   def create
     @bodydatum = Bodydatum.new(bodydatum_params)
+    @bodydatum.height.round(2)
+    @bodydatum.weight.round(2)
     respond_to do |format|
       if @bodydatum.save
         format.html { redirect_to @bodydatum, notice: 'Bodydatum was successfully created.' }
@@ -39,6 +41,8 @@ class BodydataController < ApplicationController
   # PATCH/PUT /bodydata/1
   # PATCH/PUT /bodydata/1.json
   def update
+    @bodydatum.height.round(2)
+    @bodydatum.weight.round(2)
     respond_to do |format|
       if @bodydatum.update(bodydatum_params)
         format.html { redirect_to @bodydatum, notice: 'Bodydatum was successfully updated.' }
