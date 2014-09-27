@@ -1,0 +1,33 @@
+<%= form_for(@bodydatum) do |f| %>
+  <% if @bodydatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bodydatum.errors.count, "error") %> prohibited this bodydatum from being saved:</h2>
+
+      <ul>
+      <% @bodydatum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label : %><br>
+    <%= f.text_field : %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.text_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label : %><br>
+    <%= f.text_field : %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

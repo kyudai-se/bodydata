@@ -1,0 +1,31 @@
+<h1>Listing bodydata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weight</th>
+      <th></th>
+      <th>Height</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bodydata.each do |bodydatum| %>
+      <tr>
+        <td><%= bodydatum.weight %></td>
+        <td><%= bodydatum. %></td>
+        <td><%= bodydatum.height %></td>
+        <td><%= bodydatum. %></td>
+        <td><%= link_to 'Show', bodydatum %></td>
+        <td><%= link_to 'Edit', edit_bodydatum_path(bodydatum) %></td>
+        <td><%= link_to 'Destroy', bodydatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bodydatum', new_bodydatum_path %>
