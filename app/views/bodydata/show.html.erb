@@ -1,23 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Weight:</strong>
-  <%= @bodydatum.weight %>
+  <strong>身長:</strong>
+  <%= number_with_precision(@bodydatum.height, precision: 2) %>
 </p>
 
 <p>
-  <strong>:</strong>
-  <%= @bodydatum. %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @bodydatum.height %>
-</p>
-
-<p>
-  <strong>:</strong>
-  <%= @bodydatum. %>
+  <strong>体重:</strong>
+  <%= number_with_precision(@bodydatum.weight, precision: 1) %>
 </p>
 
 <%= link_to 'Edit', edit_bodydatum_path(@bodydatum) %> |

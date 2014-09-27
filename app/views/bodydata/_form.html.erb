@@ -12,21 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label : %><br>
-    <%= f.text_field : %>
-  </div>
-  <div class="field">
-    <%= f.label :height %><br>
+    <%= f.label :"身長（小数点2桁まで）" %><br>
     <%= f.text_field :height %>
   </div>
+
   <div class="field">
-    <%= f.label : %><br>
-    <%= f.text_field : %>
+    <%= f.label :"体重（小数点1桁まで）" %><br>
+    <%= f.text_field :weight %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

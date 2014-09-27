@@ -25,7 +25,6 @@ class BodydataController < ApplicationController
   # POST /bodydata.json
   def create
     @bodydatum = Bodydatum.new(bodydatum_params)
-
     respond_to do |format|
       if @bodydatum.save
         format.html { redirect_to @bodydatum, notice: 'Bodydatum was successfully created.' }
@@ -69,6 +68,6 @@ class BodydataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bodydatum_params
-      params.require(:bodydatum).permit(:weight, :, :height, :)
+      params.require(:bodydatum).permit(:weight, :height)
     end
 end
