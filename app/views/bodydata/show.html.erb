@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>名前:</strong>
+  <%= @bodydatum.name %>
+</p>
+
+<p>
   <strong>身長:</strong>
   <%= number_with_precision(@bodydatum.height, precision: 2) %>
 </p>

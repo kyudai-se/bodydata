@@ -3,16 +3,16 @@
 <table>
   <thead>
     <tr>
+      <th>名前</th>
       <th>身長</th>
       <th>体重</th>
     </tr>
   </thead>
 
   <tbody>
-    <ul class = "sample">
-    <p>サンプル<abbr title = "サンプルコード" >テキスト</abbr></p>
     <% @bodydata.each do |bodydatum| %>
       <tr>
+        <td><abbr title = "身長:<%= number_with_precision(bodydatum.height, precision: 2) %>・体重:<%= number_with_precision(bodydatum.weight, precision: 1) %>"><%= bodydatum.name %></abbr></td>
         <td><%= number_with_precision(bodydatum.height, precision: 2) %></td>
         <td><%= number_with_precision(bodydatum.weight, precision: 1) %></td>
         <td><%= link_to '詳細', bodydatum, :title => "サンプル" %></td>

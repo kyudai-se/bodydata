@@ -72,6 +72,6 @@ class BodydataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bodydatum_params
-      params.require(:bodydatum).permit(:weight, :height)
+      params.require(:bodydatum).permit(:name, :weight, :height)
     end
 end
