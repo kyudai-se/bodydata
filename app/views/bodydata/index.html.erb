@@ -13,7 +13,7 @@
       <tr>
         <td><%= number_with_precision(bodydatum.height, precision: 2) %></td>
         <td><%= number_with_precision(bodydatum.weight, precision: 1) %></td>
-        <td><%= link_to '詳細', bodydatum %></td>
+        <td><%= link_to '詳細', bodydatum, :title => "サンプル" %></td>
         <td><%= link_to '変更', edit_bodydatum_path(bodydatum) %></td>
         <td><%= link_to '削除', bodydatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
