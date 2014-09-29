@@ -1,3 +1,34 @@
 // Place all the styles related to the bodydata controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.sample2 {
+/*	border: solid #090 3px;*/
+/*	padding: 1.5em;*/
+}
+
+.sample2 abbr[title] {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.sample2 abbr[title]:before {
+	display: none;
+}
+
+.sample2 abbr[title]:hover:before {
+	display: block;
+	position: absolute;
+	top: 1.0em;
+	left: 1.0em;
+	width: 12em;
+	margin: 0.5em;
+	padding: 0.5em;
+	border: #ccc solid 2px;
+	background: #efe;
+	color: #000;
+	font-size: 80%;
+	line-height: 1.2em;
+	content: attr(title);
+	z-index: 2;
+}

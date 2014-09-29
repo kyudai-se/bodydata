@@ -9,6 +9,8 @@
   </thead>
 
   <tbody>
+    <ul class = "sample">
+    <p>サンプル<abbr title = "サンプルコード" >テキスト</abbr></p>
     <% @bodydata.each do |bodydatum| %>
       <tr>
         <td><%= number_with_precision(bodydatum.height, precision: 2) %></td>
